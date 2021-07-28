@@ -4,6 +4,6 @@ use Dotenv\Dotenv;
 use App\Rabbit;
 
 $dotenv = Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+$env = $dotenv->load();
 
 $msgs = Rabbit::getMessages();
