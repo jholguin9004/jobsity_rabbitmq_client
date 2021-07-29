@@ -1,8 +1,8 @@
-This project connects to the RabbitMQ server, get messages and send them.
+This project connects to the RabbitMQ server, get messages and sends them.
 
-## Project instalation
-First you need to clone the repository in your local enviroment.  
-When you have the project in your enviromen then:
+## Project installation
+First you need to clone the repository in your local environment.  
+When you have the project in your environment then:
 
 **1. Go to the project's path**:  
 `cd /rebbitClientProject/root/path`  
@@ -13,16 +13,16 @@ When you have the project in your enviromen then:
 **3. Copy .env file**  
 `cp .env.sample .env`  
 
-**4. Configure enviroment variables.**  
+**4. Configure environment variables.**  
 **4.1 RabbitMQ**  
 If you are going to use the RabbitMQ container provided, you have only to change the RMQ_HOST param.  
-To get the container IP enter this in your console:  
+To get the container IP enter this code in your console:  
 `docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' rabbitmq`  
 > If you have your own RabbitMQ installation, modify all RMQ_* variables as you need.
-> Must be the same configuration than Jobsity Enviroment.
+> Must be the same configuration than Jobsity Environment.
 
 **4.2. SMTP**  
-Modify all SMTP varabiles according to your SMTP account.  
+Modify all SMTP variables according to your SMTP account.  
 
 **5. Generate containers**  
 `docker-compose up -d`  
